@@ -74,6 +74,11 @@ class ViewController: UIViewController {
                 heading.text = "It's a tie!"
             }
             retry.isHidden = false
+            for tagvalue in 101...109
+            {
+                let btnTemp = self.view.viewWithTag(tagvalue) as! UIButton;
+                btnTemp.isEnabled = false;
+            }
         }
     }
     func checkWin(other: Set<Int>,current: Set<Int>,player: String) -> (Bool, String){
